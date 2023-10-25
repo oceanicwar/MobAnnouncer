@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS `mobannouncer_ids`;
 CREATE TABLE IF NOT EXISTS `mobannouncer_ids` (
   `entry` int NOT NULL,
   `description` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
