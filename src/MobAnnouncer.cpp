@@ -20,7 +20,7 @@ void MobAnnouncerUnitScript::OnUnitDeath(Unit* unit, Unit* killer)
         auto player = unit->ToPlayer();
         auto creature = killer->ToCreature();
 
-        AnnounceToWorld(Acore::StringFormatFmt("|cff676767[ |cffFFFF00World |cff676767]|r:|cffFFFFFF Player {}{}|cffFFFFFF was killed by {}{}|cffFFFFFF.", GetHexColorFromClass(player->getClass()), player->GetName(), GetHexColorFromRank(creature->GetCreatureTemplate()->rank), creature->GetName()));
+        AnnounceToWorld(Acore::StringFormatFmt("|cff676767[ |cffFFFF00World |cff676767]|r:|cffFFFFFF {}{}|cffFFFFFF was killed by {}{}|cffFFFFFF.", GetHexColorFromClass(player->getClass()), player->GetName(), GetHexColorFromRank(creature->GetCreatureTemplate()->rank), creature->GetName()));
         return;
     }
 
@@ -29,7 +29,7 @@ void MobAnnouncerUnitScript::OnUnitDeath(Unit* unit, Unit* killer)
         auto player = killer->ToPlayer();
         auto creature = unit->ToCreature();
 
-        AnnounceToWorld(Acore::StringFormatFmt("|cff676767[ |cffFFFF00World |cff676767]|r:|cffFFFFFF Player {}{}|cffFFFFFF killed {}{}|cffFFFFFF.", GetHexColorFromClass(player->getClass()), player->GetName(), GetHexColorFromRank(creature->GetCreatureTemplate()->rank), creature->GetName()));
+        AnnounceToWorld(Acore::StringFormatFmt("|cff676767[ |cffFFFF00World |cff676767]|r:|cffFFFFFF {}{}|cffFFFFFF has killed {}{}|cffFFFFFF.", GetHexColorFromClass(player->getClass()), player->GetName(), GetHexColorFromRank(creature->GetCreatureTemplate()->rank), creature->GetName()));
         return;
     }
 }
